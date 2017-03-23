@@ -5,6 +5,7 @@ import '../public/normalize.css'
 import '../public/style.css'
 import Landing from './Landing'
 import Search from './Search'
+import Details from './Details'
 
 const App = React.createClass({
   render () {
@@ -13,6 +14,7 @@ const App = React.createClass({
         <div className='app'>
           <Match exactly pattern='/' component={Landing} />
           <Match pattern='/search' component={Search} />
+          <Match pattern='/details/:id' component={Details} />
         </div>
       </BrowserRouter>
     )
