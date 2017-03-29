@@ -1,6 +1,6 @@
 import React from 'react'
 import ShowCard from './ShowCard'
-const { arrayOf, shape, string } = React.propTypes
+const { arrayOf, shape, string } = React.PropTypes
 
 const Search = React.createClass({
   propTypes: {
@@ -25,7 +25,8 @@ const Search = React.createClass({
           <input onChange={this.handleSearchTermChange} value={this.state.searchTerm} type='text' placeholder='Search' />
         </header>
         <div>
-          {this.props.shows
+          {console.log(this.props.show)}
+          {this.props.show
             .filter((show) => `${show.title} ${show.description}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
             .map((show) => {
               return (
